@@ -63,18 +63,3 @@ input {
     margin: 0 15px;
     text-align: center;
 }
-
-.div-error {
-    display: none;
-    width: 225px; 
-}
-
-.span-error {
-    font-weight: bold;
-    color: #FF0000;
-}
-
-.inpt-error {
-    border-width: 2px;
-    border-color: #FF0000;
-}

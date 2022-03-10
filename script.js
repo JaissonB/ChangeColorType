@@ -16,37 +16,25 @@ $('.normalize .div-input .inpt-text').blur(() => {
     var b = $('#norm-blue').val().trim();
     
     if (r !== '' && g !== '' && b !=='') {
-        if (r < 0 || r > 255) {
-            $('.div-error').css('display', 'block');
-            removeNormInputErrors();
-            $('#norm-red').addClass('inpt-error');
-        } else if (g < 0 || g > 255) {
-            $('.div-error').css('display', 'block');
-            removeNormInputErrors();
-            $('#norm-green').addClass('inpt-error');
-        } else if (b < 0 || b > 255) {
-            $('.div-error').css('display', 'block');
-            removeNormInputErrors();
-            $('#norm-blue').addClass('inpt-error');
-        } else {
-            $('.div-error').css('display', 'none');
-            removeNormInputErrors();
-            $('.norm-picker').val(rgbToHex(r, g, b));
-            var normalized = normalizeRGB(r, g, b);
-            console.log(normalized)
-            $('#norm-red-response').val(normalized[0]);
-            $('#norm-green-response').val(normalized[1]);
-            $('#norm-blue-response').val(normalized[2]);
-        }
+        if (r > 255) $('#norm-red').val(r = 255);
+        if (g > 255) $('#norm-green').val(g = 255);
+        if (b > 255) $('#norm-blue').val(b = 255);
+        $('.norm-picker').val(rgbToHex(r, g, b));
+        var normalized = normalizeRGB(r, g, b);
+        console.log(normalized)
+        $('#norm-red-response').val(normalized[0]);
+        $('#norm-green-response').val(normalized[1]);
+        $('#norm-blue-response').val(normalized[2]);
     }
 })
 
-//Remove a classe de erro de todos os inputs
-function removeNormInputErrors () {
-    $('#norm-red').removeClass('inpt-error');
-    $('#norm-green').removeClass('inpt-error');
-    $('#norm-blue').removeClass('inpt-error');
-}
+$('.normalize .div-input .inpt-text').keydown(function () {
+    setTimeout(function () {
+        $('#norm-red').val($('#norm-red').val().replace(/[^0-9]/g,''));
+        $('#norm-green').val($('#norm-green').val().replace(/[^0-9]/g,''));
+        $('#norm-blue').val($('#norm-blue').val().replace(/[^0-9]/g,''));
+    }, .01)
+});
 
 //Transforma cor em hexadecimal para RGB (retorna um array[r, g, b])
 function hexToRgb (hex) {
