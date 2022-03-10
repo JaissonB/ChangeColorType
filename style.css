@@ -47,6 +47,7 @@ h1, h2, h3, h4, p, span, label {
 
 .norm-picker {
     height: 22px !important;
+    width: 70px;
 }
 
 input {
