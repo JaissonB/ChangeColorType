@@ -3,6 +3,10 @@ h1, h2, h3, h4, p, span, label {
     font-family: 'Courier New', Courier, monospace;
 }
 
+body {
+    margin: 25px;
+}
+
 .backgroundImage {
     height: 100%;
     width: 100%;
@@ -35,6 +39,10 @@ h1, h2, h3, h4, p, span, label {
     display: flex;
 }
 
+.inputs input {
+    border-radius: 5px;
+}
+
 .inputs h4 {
     margin-right: 15px;
 }
@@ -54,4 +62,19 @@ input {
     width: 50px;
     margin: 0 15px;
     text-align: center;
+}
+
+.div-error {
+    display: none;
+    width: 225px;
+}
+
+.span-error {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.inpt-error {
+    border-width: 2px;
+    border-color: #FF0000;
 }
