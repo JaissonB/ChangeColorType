@@ -46,7 +46,7 @@ function rgbToHsv (r, g, b) {
     var diff = MAX - MIN;
     var h;
     
-    if (MAX == MIN) {h = 0}
+    if (MAX == MIN) h = 0;
     else if (MAX == r) {
         h = (60 * ((g - b) / diff) + 360) % 360;
     }
@@ -57,13 +57,12 @@ function rgbToHsv (r, g, b) {
         h = (60 * ((r - g) / diff) + 240) % 360;
     }
 
-    var s;
-    if (MAX == 0) s = 0
-    else s = (diff / MAX) * 100;
+    var s = MAX == 0 ? 0 : (diff / MAX) * 100;
     var v = MAX * 100;
-    
+
     h = Math.round(h) + '°';
     s = Math.round(s) + '%';
     v = Math.round(v) + '%';
+
     return [h, s, v]
 }

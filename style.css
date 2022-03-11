@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .normalize .outputs input {
     width: 142px;
 }
@@ -76,4 +77,12 @@ input {
     background-color: darkgray;
     width: 100%;
     height: 2px;
+}
+
+.rgbToHsv .outputs h4 {
+    margin-right: 90px;
+}
+
+.rgbToHsv .outputs input {
+    width: 60px;
 }
