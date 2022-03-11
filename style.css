@@ -86,3 +86,7 @@ input {
 .rgbToHsv .outputs input {
     width: 60px;
 }
+
+.rgbToCmyk .outputs h4 {
+    margin-right: 17px;
+}

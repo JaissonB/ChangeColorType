@@ -37,10 +37,9 @@ function normalizeRGB (r, g, b) {
 
 //Transforma cor em RGB para HSV (retorna um array)
 function rgbToHsv (r, g, b) {
-    console.log("RGB:", r, g, b)
-    r = r/255
-    g = g/255
-    b = b/255
+    r = r / 255;
+    g = g / 255;
+    b = b / 255;
     var MAX = Math.max(r, Math.max(g, b));
     var MIN = Math.min(r, Math.min(g, b));
     var diff = MAX - MIN;
@@ -65,4 +64,21 @@ function rgbToHsv (r, g, b) {
     v = Math.round(v) + '%';
 
     return [h, s, v]
+}
+
+//Transforma cor em RGB para CMYK (retorna um array)
+function rgbToCmyk (r, g, b) {
+    r = r / 255;
+    g = g / 255;
+    b = b / 255;
+
+    var MAX = Math.max(r, g, b);
+    var k = 1 - MAX;
+
+    var c = Math.round((1 - r - k) / (1 - k) * 100) + '%';
+    var m = Math.round((1 - g - k) / (1 - k) * 100) + '%';
+    var y = Math.round((1 - b - k) / (1 - k) * 100) + '%';
+    k = Math.round(k * 100) + '%';
+    
+    return [c, m, y, k];
 }
