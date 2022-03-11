@@ -1,4 +1,11 @@
-h1, h2, h3, h4, p, span, label {
+h1 {
+    color: cadetblue;
+    font-size: xxx-large;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+h2, h3, h4, p, span, label {
     color: #FFFFFF;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -53,7 +60,7 @@ body {
     align-items: center;
 }
 
-.norm-picker {
+.picker {
     height: 22px !important;
     width: 70px;
 }
@@ -62,4 +69,11 @@ input {
     width: 50px;
     margin: 0 15px;
     text-align: center;
+}
+
+.spacer {
+    margin: 20px 0;
+    background-color: darkgray;
+    width: 100%;
+    height: 2px;
 }

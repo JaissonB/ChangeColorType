@@ -16,7 +16,7 @@
             <h4>Input</h4>
             <div class="div-input">
                 <label for="norm-picker">Picker</label>
-                <input type="color" class="norm-picker" id="norm-picker" value="#1633C5">
+                <input type="color" class="picker" id="norm-picker" value="#1633C5">
             </div>
             <div class="div-input">
                 <label for="norm-red">Red</label>
@@ -47,9 +47,50 @@
             </div>
         </div>
     </div>
+    <div class="spacer"></div>
+    <div class="container rgbToHsv">
+        <h2>RGB to HSV</h2>
+        <div class="div-inputs inputs">
+            <h4>Input</h4>
+            <div class="div-input">
+                <label for="rgbToHsv-picker">Picker</label>
+                <input type="color" class="picker" id="rgbToHsv-picker" value="#1633C5">
+            </div>
+            <div class="div-input">
+                <label for="rgbToHsv-red">Red</label>
+                <input type="text" id="rgbToHsv-red" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="rgbToHsv-green">Green</label>
+                <input type="text" id="rgbToHsv-green" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="rgbToHsv-blue">Blue</label>
+                <input type="text" id="rgbToHsv-blue" class="inpt-text" maxlength="3">
+            </div>
+        </div>
+        <div class="div-inputs outputs">
+            <h4>Output</h4>
+            <div class="div-input">
+                <label for="rgbToHsv-hue-response">Hue</label>
+                <input type="text" id="rgbToHsv-hue-response" disabled>
+            </div>
+            <div class="div-input">
+                <label for="rgbToHsv-saturation-response">Saturation</label>
+                <input type="text" id="rgbToHsv-saturation-response" disabled>
+            </div>
+            <div class="div-input">
+                <label for="rgbToHsv-value-response">Value</label>
+                <input type="text" id="rgbToHsv-value-response" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
     <div class="backgroundImage">
         <video type="video/mp4" autoplay class="video" loop muted src="https://prod-streaming-video-msn-com.akamaized.net/9752d732-2354-483f-a678-a6d0cd2c22b7/1a5ed13a-43f5-4e85-95c8-6579065c4d7c.mp4"></video>
     </div>
 </body>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/normalize.js"></script>
+<script type="text/javascript" src="scripts/rgbToHsv.js"></script>
 </html>
