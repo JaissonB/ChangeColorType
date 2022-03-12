@@ -90,3 +90,7 @@ input {
 .rgbToCmyk .outputs h4 {
     margin-right: 17px;
 }
+
+.hsvToRgb .outputs h4 {
+    margin-right: 110px;
+}

@@ -88,6 +88,45 @@
     </div>
     <div class="spacer"></div>
 
+    <div class="container hsvToRgb">
+        <h2>HSV to RGB</h2>
+        <div class="div-inputs inputs">
+            <h4>Input</h4>
+            <div class="div-input">
+                <label for="hsvToRgb-picker">Picker</label>
+                <input type="color" class="picker" id="hsvToRgb-picker" value="#1633C5">
+            </div>
+            <div class="div-input">
+                <label for="hsvToRgb-hue">Hue</label>
+                <input type="text" id="hsvToRgb-hue" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="hsvToRgb-saturation">Saturation</label>
+                <input type="text" id="hsvToRgb-saturation" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="hsvToRgb-value">Value</label>
+                <input type="text" id="hsvToRgb-value" class="inpt-text" maxlength="3">
+            </div>
+        </div>
+        <div class="div-inputs outputs">
+            <h4>Output</h4>
+            <div class="div-input">
+                <label for="hsvToRgb-red-response">Red</label>
+                <input type="text" id="hsvToRgb-red-response" readonly=“true”>
+            </div>
+            <div class="div-input">
+                <label for="hsvToRgb-green-response">Green</label>
+                <input type="text" id="hsvToRgb-green-response" readonly=“true”>
+            </div>
+            <div class="div-input">
+                <label for="hsvToRgb-blue-response">Blue</label>
+                <input type="text" id="hsvToRgb-blue-response" readonly=“true”>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
     <div class="container rgbToCmyk">
         <h2>RGB to CMYK</h2>
         <div class="div-inputs inputs">
@@ -139,4 +178,5 @@
 <script type="text/javascript" src="scripts/normalize.js"></script>
 <script type="text/javascript" src="scripts/rgbToHsv.js"></script>
 <script type="text/javascript" src="scripts/rgbToCmyk.js"></script>
+<script type="text/javascript" src="scripts/hsvToRgb.js"></script>
 </html>
