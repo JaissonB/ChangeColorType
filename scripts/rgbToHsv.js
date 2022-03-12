@@ -1,4 +1,3 @@
-//Normalizar RGB
 $('#rgbToHsv-picker').blur(() => {
     var val = hexToRgb($('#rgbToHsv-picker').val());
     $('#rgbToHsv-red').val(val[0]);

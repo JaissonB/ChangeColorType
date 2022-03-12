@@ -1,4 +1,3 @@
-//Normalizar RGB
 $('#cmykToRgb-picker').blur(() => {
     var val = hexToCmyk($('#cmykToRgb-picker').val());
     $('#cmykToRgb-cyan').val(val[0]);
