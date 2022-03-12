@@ -168,8 +168,51 @@
             </div>
         </div>
     </div>
-
     <div class="spacer"></div>
+
+    <div class="container cmykToRgb">
+        <h2>CMYK to RGB</h2>
+        <div class="div-inputs inputs">
+            <h4>Input</h4>
+            <div class="div-input">
+                <label for="cmykToRgb-picker">Picker</label>
+                <input type="color" class="picker" id="cmykToRgb-picker" value="#1633C5">
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-cyan">Cyan</label>
+                <input type="text" id="cmykToRgb-cyan" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-magenta">Magenta</label>
+                <input type="text" id="cmykToRgb-magenta" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-yellow">Yellow</label>
+                <input type="text" id="cmykToRgb-yellow" class="inpt-text" maxlength="3">
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-black">Black</label>
+                <input type="text" id="cmykToRgb-black" class="inpt-text" maxlength="3">
+            </div>
+        </div>
+        <div class="div-inputs outputs">
+            <h4>Output</h4>
+            <div class="div-input">
+                <label for="cmykToRgb-red-response">Red</label>
+                <input type="text" id="cmykToRgb-red-response" readonly=“true”>
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-green-response">Green</label>
+                <input type="text" id="cmykToRgb-green-response" readonly=“true”>
+            </div>
+            <div class="div-input">
+                <label for="cmykToRgb-blue-response">Blue</label>
+                <input type="text" id="cmykToRgb-blue-response" readonly=“true”>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+
     <div class="backgroundImage">
         <video type="video/mp4" autoplay class="video" loop muted src="https://prod-streaming-video-msn-com.akamaized.net/9752d732-2354-483f-a678-a6d0cd2c22b7/1a5ed13a-43f5-4e85-95c8-6579065c4d7c.mp4"></video>
     </div>
@@ -179,4 +222,5 @@
 <script type="text/javascript" src="scripts/rgbToHsv.js"></script>
 <script type="text/javascript" src="scripts/rgbToCmyk.js"></script>
 <script type="text/javascript" src="scripts/hsvToRgb.js"></script>
+<script type="text/javascript" src="scripts/cmykToRgb.js"></script>
 </html>

@@ -21,7 +21,6 @@ $('.hsvToRgb .div-input .inpt-text').blur(() => {
         if (v > 100) $('#hsvToRgb-value').val(v = 100);
         var rgb = hsvToRgb(h, s, v);
         $('#hsvToRgb-picker').val(rgbToHex(rgb[0], rgb[1], rgb[2]));
-        var rgb = hsvToRgb(h, s, v);
         $('#hsvToRgb-red-response').val(rgb[0]);
         $('#hsvToRgb-green-response').val(rgb[1]);
         $('#hsvToRgb-blue-response').val(rgb[2]);

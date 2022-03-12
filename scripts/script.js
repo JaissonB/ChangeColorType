@@ -15,6 +15,18 @@ function hexToHsv (hex) {
     return [h, s, v];
 }
 
+//Transforma cor em hexadecimal para CMYK (retorna um array[c, m, y, k])
+function hexToCmyk (hex) {
+    var rgb = hexToRgb(hex);
+    var cmyk = rgbToCmyk(rgb[0], rgb[1], rgb[2]);
+    var c = cmyk[0].replace(/[^0-9]/g,'');
+    var m = cmyk[1].replace(/[^0-9]/g,'');
+    var y = cmyk[2].replace(/[^0-9]/g,'');
+    var k = cmyk[3].replace(/[^0-9]/g,'');
+
+    return [c, m, y, k];
+}
+
 //Transforma cor em RGB para hexadecimal (retorna uma string)
 function rgbToHex (r, g, b) {
     r = parseInt(r).toString(16);
@@ -129,4 +141,12 @@ function hsvToRgb (h, s, v) {
     b = Math.round((b + m) * 255);
 
    return [r, g, b]
+}
+
+function cmykToRgb (c, m, y, k) {
+    var r = Math.round(255 * (1 - c / 100) * (1 - k / 100));
+    var g = Math.round(255 * (1 - m / 100) * (1 - k / 100));
+    var b = Math.round(255 * (1 - y / 100) * (1 - k / 100));
+
+    return [r,g,b];
 }
