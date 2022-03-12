@@ -98,3 +98,11 @@ input {
 .cmykToRgb .outputs h4 {
     margin-right: 106px;
 }
+
+.rgbToGray .outputs h4 {
+    margin-right: 125px;
+}
+
+.rgbToGray .outputs input {
+    width: 100px;
+}

@@ -1,10 +1,10 @@
-//Transforma cor em hexadecimal para RGB (retorna um array[r, g, b])
+//Converte hexadecimal para RGB (retorna um array[r, g, b])
 function hexToRgb (hex) {
     return hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,(m, r, g, b) => '#' + r + r + g + g + b + b)
     .substring(1).match(/.{2}/g).map(x => parseInt(x, 16));
 }
 
-//Transforma cor em hexadecimal para HSV (retorna um array[h, s, v])
+//Converte hexadecimal para HSV (retorna um array[h, s, v])
 function hexToHsv (hex) {
     var rgb = hexToRgb(hex);
     var hsv = rgbToHsv(rgb[0], rgb[1], rgb[2]);
@@ -15,7 +15,7 @@ function hexToHsv (hex) {
     return [h, s, v];
 }
 
-//Transforma cor em hexadecimal para CMYK (retorna um array[c, m, y, k])
+//Converte hexadecimal para CMYK (retorna um array[c, m, y, k])
 function hexToCmyk (hex) {
     var rgb = hexToRgb(hex);
     var cmyk = rgbToCmyk(rgb[0], rgb[1], rgb[2]);
@@ -27,7 +27,7 @@ function hexToCmyk (hex) {
     return [c, m, y, k];
 }
 
-//Transforma cor em RGB para hexadecimal (retorna uma string)
+//Converte RGB para hexadecimal (retorna uma string)
 function rgbToHex (r, g, b) {
     r = parseInt(r).toString(16);
     g = parseInt(g).toString(16);
@@ -60,7 +60,7 @@ function normalizeRGB (r, g, b) {
     return [red, green, blue];
 }
 
-//Transforma cor em RGB para HSV (retorna um array)
+//Converte RGB para HSV (retorna um array)
 function rgbToHsv (r, g, b) {
     r /= 255;
     g /= 255;
@@ -91,7 +91,7 @@ function rgbToHsv (r, g, b) {
     return [h, s, v]
 }
 
-//Transforma cor em RGB para CMYK (retorna um array)
+//Converte RGB para CMYK (retorna um array)
 function rgbToCmyk (r, g, b) {
     r /= 255;
     g /= 255;
@@ -108,6 +108,7 @@ function rgbToCmyk (r, g, b) {
     return [c, m, y, k];
 }
 
+//Converte HSV para RGB (retorna um array)
 function hsvToRgb (h, s, v) {
     s /= 100;
     v /= 100;
@@ -143,10 +144,16 @@ function hsvToRgb (h, s, v) {
    return [r, g, b]
 }
 
+//Converte CMYK para RGB (retorna um array)
 function cmykToRgb (c, m, y, k) {
     var r = Math.round(255 * (1 - c / 100) * (1 - k / 100));
     var g = Math.round(255 * (1 - m / 100) * (1 - k / 100));
     var b = Math.round(255 * (1 - y / 100) * (1 - k / 100));
 
     return [r,g,b];
+}
+
+//Converte RGB para tons de cinza (retorna um valor)
+function rgbToGray (r, g, b) {
+    return gray = Math.round((r + g + b) / 3);
 }
