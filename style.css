@@ -11,7 +11,8 @@ h2, h3, h4, p, span, label {
 }
 
 body {
-    margin: 25px;
+    margin: 50px;
+    margin-bottom: 250px;
 }
 
 .backgroundImage {
@@ -37,6 +38,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-left: 50px;
 }
 
 .normalize .outputs input {
