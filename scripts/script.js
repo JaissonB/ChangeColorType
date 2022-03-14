@@ -18,7 +18,9 @@ function hexToHsv (hex) {
 //Converte hexadecimal para CMYK (retorna um array[c, m, y, k])
 function hexToCmyk (hex) {
     var rgb = hexToRgb(hex);
+    console.log(rgb)
     var cmyk = rgbToCmyk(rgb[0], rgb[1], rgb[2]);
+    console.log(cmyk)
     var c = cmyk[0].replace(/[^0-9]/g,'');
     var m = cmyk[1].replace(/[^0-9]/g,'');
     var y = cmyk[2].replace(/[^0-9]/g,'');
@@ -99,10 +101,17 @@ function rgbToCmyk (r, g, b) {
 
     var MAX = Math.max(r, g, b);
     var k = 1 - MAX;
+    var c;
+    var m;
+    var y;
 
-    var c = Math.round((1 - r - k) / (1 - k) * 100) + '%';
-    var m = Math.round((1 - g - k) / (1 - k) * 100) + '%';
-    var y = Math.round((1 - b - k) / (1 - k) * 100) + '%';
+    if (k == 1) {
+        c = m = y = (0 + '');
+    } else {
+        c = Math.round((1 - r - k) / (1 - k) * 100) + '%';
+        m = Math.round((1 - g - k) / (1 - k) * 100) + '%';
+        y = Math.round((1 - b - k) / (1 - k) * 100) + '%';
+    }
     k = Math.round(k * 100) + '%';
     
     return [c, m, y, k];
