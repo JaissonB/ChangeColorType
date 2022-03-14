@@ -18,9 +18,7 @@ function hexToHsv (hex) {
 //Converte hexadecimal para CMYK (retorna um array[c, m, y, k])
 function hexToCmyk (hex) {
     var rgb = hexToRgb(hex);
-    console.log(rgb)
     var cmyk = rgbToCmyk(rgb[0], rgb[1], rgb[2]);
-    console.log(cmyk)
     var c = cmyk[0].replace(/[^0-9]/g,'');
     var m = cmyk[1].replace(/[^0-9]/g,'');
     var y = cmyk[2].replace(/[^0-9]/g,'');
@@ -58,6 +56,8 @@ function normalizeRGB (r, g, b) {
     var red = r / (r + g + b);
     var green = g / (r + g + b);
     var blue = b / (r + g + b);
+    
+    if (r == 0 && g == 0 && b == 0) red = green = blue = 0;
 
     return [red, green, blue];
 }
@@ -105,13 +105,11 @@ function rgbToCmyk (r, g, b) {
     var m;
     var y;
 
-    if (k == 1) {
-        c = m = y = (0 + '');
-    } else {
-        c = Math.round((1 - r - k) / (1 - k) * 100) + '%';
-        m = Math.round((1 - g - k) / (1 - k) * 100) + '%';
-        y = Math.round((1 - b - k) / (1 - k) * 100) + '%';
-    }
+    c = Math.round((1 - r - k) / (1 - k) * 100) + '%';
+    m = Math.round((1 - g - k) / (1 - k) * 100) + '%';
+    y = Math.round((1 - b - k) / (1 - k) * 100) + '%';
+
+    if (r == 0 && g == 0 && b == 0) c = m = y = (0 + '');
     k = Math.round(k * 100) + '%';
     
     return [c, m, y, k];
