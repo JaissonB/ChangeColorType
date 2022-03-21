@@ -4,260 +4,268 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./picker.png" />
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Change Color Type</title>
 </head>
 <body>
-    <h1>Change Color Type</h1>
-    <p>
-        Guide: Todas as conversões possuem um input em forma de paleta de cores, ele pode ser usado para definir a cor de entrada, 
-        mas é apenas uma alternativa, pode-se também inserir os valores manualmente nos inputs normais, 
-        de acordo com o tipo de cor que você quer converter. Para efetuar a conversão inserindo os valores manualmente, 
-        basta preencher todos os inputs e tirar o foco dos mesmos, <strong>clicando fora deles ou usando o Tab</strong> (se estiver em um desktop).
-    </p>
-    <div class="container normalize">
-        <h2>Normalize RGB</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="norm-picker">Picker</label>
-                <input type="color" class="picker" id="norm-picker" value="#1633C5">
+    <header>
+        <h1>Change Color Type</h1>
+        <p>
+            Guide: Todas as conversões possuem um input em forma de paleta de cores, ele pode ser usado para definir a cor de entrada, 
+            mas é apenas uma alternativa, pode-se também inserir os valores manualmente nos inputs normais, 
+            de acordo com o tipo de cor que você quer converter. Para efetuar a conversão inserindo os valores manualmente, 
+            basta preencher todos os inputs e tirar o foco dos mesmos, <strong>clicando fora deles ou usando o Tab</strong> (se estiver em um desktop).
+        </p>
+    </header>
+    <main>
+        <div class="container normalize">
+            <h2>Normalize RGB</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="norm-picker">Picker</label>
+                    <input type="color" class="picker" id="norm-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="norm-red">Red</label>
+                    <input type="text" id="norm-red" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="norm-green">Green</label>
+                    <input type="text" id="norm-green" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="norm-blue">Blue</label>
+                    <input type="text" id="norm-blue" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="norm-red">Red</label>
-                <input type="text" id="norm-red" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="norm-green">Green</label>
-                <input type="text" id="norm-green" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="norm-blue">Blue</label>
-                <input type="text" id="norm-blue" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="norm-red-response">Red</label>
+                    <input type="text" id="norm-red-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="norm-green-response">Green</label>
+                    <input type="text" id="norm-green-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="norm-blue-response">Blue</label>
+                    <input type="text" id="norm-blue-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="norm-red-response">Red</label>
-                <input type="text" id="norm-red-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="norm-green-response">Green</label>
-                <input type="text" id="norm-green-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="norm-blue-response">Blue</label>
-                <input type="text" id="norm-blue-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="container rgbToHsv">
-        <h2>RGB to HSV</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="rgbToHsv-picker">Picker</label>
-                <input type="color" class="picker" id="rgbToHsv-picker" value="#1633C5">
+        <div class="container rgbToHsv">
+            <h2>RGB to HSV</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="rgbToHsv-picker">Picker</label>
+                    <input type="color" class="picker" id="rgbToHsv-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToHsv-red">Red</label>
+                    <input type="text" id="rgbToHsv-red" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToHsv-green">Green</label>
+                    <input type="text" id="rgbToHsv-green" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToHsv-blue">Blue</label>
+                    <input type="text" id="rgbToHsv-blue" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="rgbToHsv-red">Red</label>
-                <input type="text" id="rgbToHsv-red" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToHsv-green">Green</label>
-                <input type="text" id="rgbToHsv-green" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToHsv-blue">Blue</label>
-                <input type="text" id="rgbToHsv-blue" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="rgbToHsv-hue-response">Hue</label>
+                    <input type="text" id="rgbToHsv-hue-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="rgbToHsv-saturation-response">Saturation</label>
+                    <input type="text" id="rgbToHsv-saturation-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="rgbToHsv-value-response">Value</label>
+                    <input type="text" id="rgbToHsv-value-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="rgbToHsv-hue-response">Hue</label>
-                <input type="text" id="rgbToHsv-hue-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="rgbToHsv-saturation-response">Saturation</label>
-                <input type="text" id="rgbToHsv-saturation-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="rgbToHsv-value-response">Value</label>
-                <input type="text" id="rgbToHsv-value-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="container hsvToRgb">
-        <h2>HSV to RGB</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="hsvToRgb-picker">Picker</label>
-                <input type="color" class="picker" id="hsvToRgb-picker" value="#1633C5">
+        <div class="container hsvToRgb">
+            <h2>HSV to RGB</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="hsvToRgb-picker">Picker</label>
+                    <input type="color" class="picker" id="hsvToRgb-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="hsvToRgb-hue">Hue</label>
+                    <input type="text" id="hsvToRgb-hue" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="hsvToRgb-saturation">Saturation</label>
+                    <input type="text" id="hsvToRgb-saturation" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="hsvToRgb-value">Value</label>
+                    <input type="text" id="hsvToRgb-value" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="hsvToRgb-hue">Hue</label>
-                <input type="text" id="hsvToRgb-hue" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="hsvToRgb-saturation">Saturation</label>
-                <input type="text" id="hsvToRgb-saturation" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="hsvToRgb-value">Value</label>
-                <input type="text" id="hsvToRgb-value" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="hsvToRgb-red-response">Red</label>
+                    <input type="text" id="hsvToRgb-red-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="hsvToRgb-green-response">Green</label>
+                    <input type="text" id="hsvToRgb-green-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="hsvToRgb-blue-response">Blue</label>
+                    <input type="text" id="hsvToRgb-blue-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="hsvToRgb-red-response">Red</label>
-                <input type="text" id="hsvToRgb-red-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="hsvToRgb-green-response">Green</label>
-                <input type="text" id="hsvToRgb-green-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="hsvToRgb-blue-response">Blue</label>
-                <input type="text" id="hsvToRgb-blue-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="container rgbToCmyk">
-        <h2>RGB to CMYK</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="rgbToCmyk-picker">Picker</label>
-                <input type="color" class="picker" id="rgbToCmyk-picker" value="#1633C5">
+        <div class="container rgbToCmyk">
+            <h2>RGB to CMYK</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="rgbToCmyk-picker">Picker</label>
+                    <input type="color" class="picker" id="rgbToCmyk-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-red">Red</label>
+                    <input type="text" id="rgbToCmyk-red" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-green">Green</label>
+                    <input type="text" id="rgbToCmyk-green" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-blue">Blue</label>
+                    <input type="text" id="rgbToCmyk-blue" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-red">Red</label>
-                <input type="text" id="rgbToCmyk-red" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-green">Green</label>
-                <input type="text" id="rgbToCmyk-green" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-blue">Blue</label>
-                <input type="text" id="rgbToCmyk-blue" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="rgbToCmyk-cyan-response">Cyan</label>
+                    <input type="text" id="rgbToCmyk-cyan-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-magenta-response">Magenta</label>
+                    <input type="text" id="rgbToCmyk-magenta-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-yellow-response">Yellow</label>
+                    <input type="text" id="rgbToCmyk-yellow-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="rgbToCmyk-black-response">Black</label>
+                    <input type="text" id="rgbToCmyk-black-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="rgbToCmyk-cyan-response">Cyan</label>
-                <input type="text" id="rgbToCmyk-cyan-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-magenta-response">Magenta</label>
-                <input type="text" id="rgbToCmyk-magenta-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-yellow-response">Yellow</label>
-                <input type="text" id="rgbToCmyk-yellow-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="rgbToCmyk-black-response">Black</label>
-                <input type="text" id="rgbToCmyk-black-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="container cmykToRgb">
-        <h2>CMYK to RGB</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="cmykToRgb-picker">Picker</label>
-                <input type="color" class="picker" id="cmykToRgb-picker" value="#1633C5">
+        <div class="container cmykToRgb">
+            <h2>CMYK to RGB</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="cmykToRgb-picker">Picker</label>
+                    <input type="color" class="picker" id="cmykToRgb-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-cyan">Cyan</label>
+                    <input type="text" id="cmykToRgb-cyan" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-magenta">Magenta</label>
+                    <input type="text" id="cmykToRgb-magenta" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-yellow">Yellow</label>
+                    <input type="text" id="cmykToRgb-yellow" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-black">Black</label>
+                    <input type="text" id="cmykToRgb-black" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="cmykToRgb-cyan">Cyan</label>
-                <input type="text" id="cmykToRgb-cyan" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="cmykToRgb-magenta">Magenta</label>
-                <input type="text" id="cmykToRgb-magenta" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="cmykToRgb-yellow">Yellow</label>
-                <input type="text" id="cmykToRgb-yellow" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="cmykToRgb-black">Black</label>
-                <input type="text" id="cmykToRgb-black" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="cmykToRgb-red-response">Red</label>
+                    <input type="text" id="cmykToRgb-red-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-green-response">Green</label>
+                    <input type="text" id="cmykToRgb-green-response" readonly=“true”>
+                </div>
+                <div class="div-input">
+                    <label for="cmykToRgb-blue-response">Blue</label>
+                    <input type="text" id="cmykToRgb-blue-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="cmykToRgb-red-response">Red</label>
-                <input type="text" id="cmykToRgb-red-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="cmykToRgb-green-response">Green</label>
-                <input type="text" id="cmykToRgb-green-response" readonly=“true”>
-            </div>
-            <div class="div-input">
-                <label for="cmykToRgb-blue-response">Blue</label>
-                <input type="text" id="cmykToRgb-blue-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
-    <div class="spacer"></div>
+        <div class="spacer"></div>
 
-    <div class="container rgbToGray">
-        <h2>RGB to Gray Scale</h2>
-        <div class="div-inputs inputs">
-            <h4>Input</h4>
-            <div class="div-input">
-                <label for="rgbToGray-picker">Picker</label>
-                <input type="color" class="picker" id="rgbToGray-picker" value="#1633C5">
+        <div class="container rgbToGray">
+            <h2>RGB to Gray Scale</h2>
+            <div class="div-inputs inputs">
+                <h4>Input</h4>
+                <div class="div-input">
+                    <label for="rgbToGray-picker">Picker</label>
+                    <input type="color" class="picker" id="rgbToGray-picker" value="#1633C5">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToGray-red">Red</label>
+                    <input type="text" id="rgbToGray-red" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToGray-green">Green</label>
+                    <input type="text" id="rgbToGray-green" class="inpt-text" maxlength="3">
+                </div>
+                <div class="div-input">
+                    <label for="rgbToGray-blue">Blue</label>
+                    <input type="text" id="rgbToGray-blue" class="inpt-text" maxlength="3">
+                </div>
             </div>
-            <div class="div-input">
-                <label for="rgbToGray-red">Red</label>
-                <input type="text" id="rgbToGray-red" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToGray-green">Green</label>
-                <input type="text" id="rgbToGray-green" class="inpt-text" maxlength="3">
-            </div>
-            <div class="div-input">
-                <label for="rgbToGray-blue">Blue</label>
-                <input type="text" id="rgbToGray-blue" class="inpt-text" maxlength="3">
+            <div class="div-inputs outputs">
+                <h4>Output</h4>
+                <div class="div-input">
+                    <label for="rgbToGray-gray-response">Gray Scale</label>
+                    <input type="text" id="rgbToGray-gray-response" readonly=“true”>
+                </div>
             </div>
         </div>
-        <div class="div-inputs outputs">
-            <h4>Output</h4>
-            <div class="div-input">
-                <label for="rgbToGray-gray-response">Gray Scale</label>
-                <input type="text" id="rgbToGray-gray-response" readonly=“true”>
-            </div>
-        </div>
-    </div>
 
-    <div class="backgroundImage">
-        <video type="video/mp4" autoplay class="video" loop muted src="https://prod-streaming-video-msn-com.akamaized.net/9752d732-2354-483f-a678-a6d0cd2c22b7/1a5ed13a-43f5-4e85-95c8-6579065c4d7c.mp4"></video>
-    </div>
+        <div class="backgroundImage">
+            <video type="video/mp4" autoplay class="video" loop muted src="https://prod-streaming-video-msn-com.akamaized.net/9752d732-2354-483f-a678-a6d0cd2c22b7/1a5ed13a-43f5-4e85-95c8-6579065c4d7c.mp4"></video>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/normalize.js"></script>
+    <script type="text/javascript" src="scripts/rgbToHsv.js"></script>
+    <script type="text/javascript" src="scripts/rgbToCmyk.js"></script>
+    <script type="text/javascript" src="scripts/hsvToRgb.js"></script>
+    <script type="text/javascript" src="scripts/cmykToRgb.js"></script>
+    <script type="text/javascript" src="scripts/rgbToGray.js"></script>
 </body>
-<script type="text/javascript" src="scripts/script.js"></script>
-<script type="text/javascript" src="scripts/normalize.js"></script>
-<script type="text/javascript" src="scripts/rgbToHsv.js"></script>
-<script type="text/javascript" src="scripts/rgbToCmyk.js"></script>
-<script type="text/javascript" src="scripts/hsvToRgb.js"></script>
-<script type="text/javascript" src="scripts/cmykToRgb.js"></script>
-<script type="text/javascript" src="scripts/rgbToGray.js"></script>
 </html>
