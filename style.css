@@ -12,7 +12,6 @@ h2, h3, h4, p, span, label {
 
 body {
     margin: 50px;
-    margin-bottom: 250px;
 }
 
 .backgroundImage {
@@ -111,4 +110,15 @@ input {
 
 .rgbToGray .outputs input {
     width: 100px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    background-color: #ffffff36;
+    position: absolute;
+    left: 0;
 }
